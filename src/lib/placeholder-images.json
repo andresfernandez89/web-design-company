@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "client-1",
+      "description": "A sophisticated e-commerce platform for a premium fashion brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1547595628-c61a29f496f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYXNoaW9uJTIwd2Vic2l0ZXxlbnwwfHx8fDE3NTk2NDI5NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion website"
+    },
+    {
+      "id": "client-2",
+      "description": "A visually stunning portfolio website for a professional photographer.",
+      "imageUrl": "https://images.unsplash.com/photo-1675441923538-67e975455d2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaG90b2dyYXBoeSUyMHBvcnRmb2xpb3xlbnwwfHx8fDE3NTk2ODg5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photography portfolio"
+    },
+    {
+      "id": "client-3",
+      "description": "A sleek and modern corporate website for an innovative tech startup.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNoJTIwc3RhcnR1cHxlbnwwfHx8fDE3NTk2NDg2ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech startup"
+    },
+    {
+      "id": "client-4",
+      "description": "An intuitive booking website for a boutique travel agency.",
+      "imageUrl": "https://images.unsplash.com/photo-1546968033-3918a885ae49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dHJhdmVsJTIwYm9va2luZ3xlbnwwfHx8fDE3NTk2OTkzMzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "travel booking"
+    }
+  ]
 }
