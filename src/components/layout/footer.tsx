@@ -1,4 +1,4 @@
-import { Code2, Github, Linkedin, Twitter } from "lucide-react";
+import { Code2, Github, Linkedin, Twitter, Mail, MessageCircle, Instagram } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -14,14 +14,14 @@ export function Footer() {
             © {new Date().getFullYear()} CodeCanvas. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="#" aria-label="Twitter">
-              <Twitter className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+            <Link href="mailto:contact@codecanvas.com" aria-label="Email">
+              <Mail className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" aria-label="GitHub">
-              <Github className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+            <Link href="https://wa.me/1234567890" aria-label="WhatsApp">
+              <MessageCircle className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
-            <Link href="#" aria-label="LinkedIn">
-              <Linkedin className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+            <Link href="#" aria-label="Instagram">
+              <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
             </Link>
           </div>
         </div>

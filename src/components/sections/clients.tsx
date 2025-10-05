@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export function Clients() {
   const clientImages = PlaceHolderImages.slice(0, 4);
@@ -16,8 +18,8 @@ export function Clients() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {clientImages.map((image) => (
-            <Card key={image.id} className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-              <CardContent className="p-0">
+            <Card key={image.id} className="overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 flex flex-col">
+              <CardContent className="p-0 flex flex-col flex-grow">
                 <div className="aspect-video overflow-hidden">
                   <Image
                     src={image.imageUrl}
@@ -28,9 +30,13 @@ export function Clients() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6 bg-card">
+                <div className="p-6 bg-card flex flex-col flex-grow">
                   <h3 className="font-headline text-xl font-semibold capitalize">{image.imageHint.replace('-', ' ')}</h3>
-                  <p className="text-muted-foreground mt-2">{image.description}</p>
+                  <p className="text-muted-foreground mt-2 flex-grow">{image.description}</p>
+                  <Link href="#" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline mt-4">
+                    Visit Website
+                    <ArrowUpRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </CardContent>
             </Card>
