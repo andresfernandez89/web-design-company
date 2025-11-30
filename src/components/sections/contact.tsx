@@ -1,13 +1,13 @@
 import { Mail, MessageCircle } from 'lucide-react'
 
-export function Contact() {
+export function Contact({ dict }: { dict: any }) {
   return (
     <section id='contact' className='py-20 md:py-32'>
       <div className='container mx-auto px-4 md:px-6'>
         <div className='max-w-3xl mx-auto text-center mb-12 md:mb-16'>
-          <h2 className='font-headline text-4xl md:text-5xl font-bold'>Get In Touch</h2>
+          <h2 className='font-headline text-4xl md:text-5xl font-bold'>{dict['contact.title']}</h2>
           <p className='mt-4 text-lg text-muted-foreground'>
-            Ready to start your project? Let's discuss how we can bring your vision to life.
+            {dict['contact.subtitle']}
           </p>
         </div>
         <div className='max-w-md mx-auto'>
@@ -15,7 +15,7 @@ export function Contact() {
             <div className='flex items-center gap-4 flex-1'>
               <Mail className='h-8 w-8 text-primary' />
               <div>
-                <h3 className='font-semibold'>Email</h3>
+                <h3 className='font-semibold'>{dict['contact.email']}</h3>
                 <p className='text-muted-foreground'>contact@codecanvas.com</p>
               </div>
             </div>
