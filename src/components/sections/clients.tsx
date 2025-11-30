@@ -2,16 +2,16 @@ import { Card, CardContent } from '@/components/ui/card'
 import { PlaceHolderImages } from '@/lib/placeholder-images'
 import { ArrowUpRight } from 'lucide-react'
 
-export function Clients() {
+export function Clients({ dict }: { dict: any }) {
   const clientImages = PlaceHolderImages.slice(0, 4)
 
   return (
     <section id='clients' className='py-20 md:py-32'>
       <div className='container mx-auto px-4 md:px-6'>
         <div className='max-w-3xl mx-auto text-center mb-12 md:mb-16'>
-          <h2 className='font-headline text-4xl md:text-5xl font-bold'>Our Work</h2>
+          <h2 className='font-headline text-4xl md:text-5xl font-bold'>{dict['clients.title']}</h2>
           <p className='mt-4 text-lg text-muted-foreground'>
-            We're proud of the solutions we've delivered. Here's a glimpse of our recent projects.
+            {dict['clients.subtitle']}
           </p>
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
@@ -24,21 +24,21 @@ export function Clients() {
                 <div className='aspect-video overflow-hidden'>
                   <img
                     src={image.imageUrl}
-                    alt={image.description}
+                    alt={dict[`projects.${image.id}.desc`]}
                     data-ai-hint={image.imageHint}
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                   />
                 </div>
                 <div className='p-6 bg-card flex flex-col flex-grow'>
                   <h3 className='font-headline text-xl font-semibold capitalize'>
-                    {image.imageHint.replace('-', ' ')}
+                    {dict[`projects.${image.id}.title`]}
                   </h3>
-                  <p className='text-muted-foreground mt-2 flex-grow'>{image.description}</p>
+                  <p className='text-muted-foreground mt-2 flex-grow'>{dict[`projects.${image.id}.desc`]}</p>
                   <a
                     href='#'
                     className='inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline mt-4'
                   >
-                    Visit Website
+                    {dict['clients.visit']}
                     <ArrowUpRight className='h-4 w-4' />
                   </a>
                 </div>

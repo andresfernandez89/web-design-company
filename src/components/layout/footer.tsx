@@ -1,6 +1,6 @@
 import { Code2, Instagram, Mail, MessageCircle } from 'lucide-react'
 
-export function Footer() {
+export function Footer({ dict }: { dict: any }) {
   return (
     <footer className='border-t border-border/50 py-12 bg-card'>
       <div className='container mx-auto px-4 md:px-6'>
@@ -10,7 +10,7 @@ export function Footer() {
             <span className='text-xl font-bold font-headline'>CodeCanvas</span>
           </div>
           <p className='text-sm text-muted-foreground text-center md:text-left'>
-            © {new Date().getFullYear()} CodeCanvas. All rights reserved.
+            © {new Date().getFullYear()} CodeCanvas. {dict['footer.rights']}
           </p>
           <div className='flex items-center gap-4'>
             <a href='mailto:contact@codecanvas.com' aria-label='Email'>

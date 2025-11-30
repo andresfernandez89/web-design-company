@@ -5,17 +5,17 @@ import { Contact } from './sections/contact'
 import { Hero } from './sections/hero'
 import { Services } from './sections/services'
 
-export default function Home() {
+export default function Home({ lang, dict }) {
   return (
     <div className='flex flex-col min-h-screen'>
-      <Header />
+      <Header lang={lang} dict={dict} />
       <main className='flex-grow'>
-        <Hero />
-        <Services />
-        <Clients />
-        <Contact />
+        <Hero dict={dict} />
+        <Services dict={dict} />
+        <Clients dict={dict} />
+        <Contact dict={dict} />
       </main>
-      <Footer />
+      <Footer dict={dict} />
     </div>
   )
 }

@@ -1,10 +1,22 @@
 ---
-import Home from '../components/Home';
-import '../index.css';
-import { ui, defaultLang } from '../i18n/ui';
+import Home from '../../components/Home';
+import '../../index.css';
+import { ui, languages, defaultLang } from '../../i18n/ui';
 
-const lang = defaultLang;
-const dict = ui[lang];
+export function getStaticPaths() {
+  return Object.keys(languages)
+    .filter((lang) => lang !== defaultLang)
+    .map((lang) => ({
+      params: { lang },
+    }));
+}
+
+const { lang } = Astro.params;
+const dict = ui[lang as keyof typeof ui];
+
+if (!dict) {
+  return Astro.redirect('/404');
+}
 ---
 
 <!DOCTYPE html>
